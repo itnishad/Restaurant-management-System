@@ -1,0 +1,22 @@
+<%- include('../partials/head.ejs') %> 
+
+<div class="category-bottom">
+    <div class="category-item">
+      <% foods.forEach(element => { %>
+      <div class="cat">
+        <div class="card" style="width: 18rem;">
+          <img src="/images/<%= element.image %>" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"><%= element.title %> </h5>
+            <p class="card-text"><%= element.description %></p>
+            <h4>৳ <%= element.price %> </h4>
+            <a href="/add/toCart/<%= element._id %> " class="btn btn-primary">Add To Cart</a>
+          </div>
+        </div>
+      </div>
+      <% }); %>
+    </div>
+
+  </div>
+
+<%- include('../partials/footer.ejs') %> 

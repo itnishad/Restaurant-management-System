@@ -1,0 +1,128 @@
+<%- include('../playground/head.ejs') %>
+
+
+
+<div class="my-container">
+
+  <div id="section1">
+    <section>
+      <div class="hero acontainer">
+        <div>
+          <h1>Hello, <span></span></h1>
+          <h1>Are You Hungry? <span></span></h1>
+          <h1> Don't Wait! <span></span></h1>
+          <a href="#" type="button" class="cta">Order Now</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div id="section2">
+    <section id="section2">
+      <div class="categorys acontainer">
+        <div class="category-top">
+          <h1 class="category-title">Cate<span>g</span>ory</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos corrupti nam facilis numquam dolorem id
+            praesentium odio debitis sit sequi eveniet suscipit, deserunt enim, illum, amet itaque rem eum
+            necessitatibus?</p>
+        </div>
+        <div class="category-bottom">
+          <div class="category-item">
+            <% category.forEach(element => { %>
+            <div class="cat">
+              <div class="card" style="width: 18rem;">
+                <img src="/images/<%= element.image %> " class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title"><%= element.title %> </h5>
+                  <p class="card-text"><%= element.description %></p>
+                  <a href="/category/detailsCategory/<%= element.slug %> " class="btn btn-primary">View Details</a>
+                </div>
+              </div>
+            </div>
+
+            <% }); %>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <div id="section3">
+    <section id="section2">
+      <div class="categorys acontainer">
+        <div class="category-top">
+          <h1 class="category-title">F<span>oo</span>D</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos corrupti nam facilis numquam dolorem id
+            praesentium odio debitis sit sequi eveniet suscipit, deserunt enim, illum, amet itaque rem eum
+            necessitatibus?</p>
+        </div>
+        <div class="category-bottom">
+  
+          <div class="category-item">
+            <% for(let i=0; i<4 ; i++) { %> 
+            <div class="cat">
+              <div class="card" style="width: 18rem;">
+                <img src="/images/<%= food[i].image %> " class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title"><%= food[i].title %> </h5>
+                  <p class="card-text"><%= food[i].description %> </p>
+                  <h4>৳ <%= food[i].price %></h4>
+                  <a href="/add/toCart/<%= food[i]._id %> " class="btn btn-primary">Add To Cart</a>
+                </div>
+              </div>
+            </div>
+            <% } %> 
+          </div>
+        
+        </div>
+        <div class="text-center mt-5"> <a class="btn btn-secondary" href="/food/allFood">View All Food</a></div>
+      </div>
+    </section>
+
+  </div>
+</div>
+
+<!-- Contact Section -->
+
+<section id="section4">
+  <div class="contact acontainer">
+      <div><h1 class="section-title">Contact <span>Info</span></h1></div>
+      <div class="contact-items">
+        <div class="contact-item">
+          <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/phone.png"/></div>
+          <div class="contact-info">
+            <h1>Phone</h1>
+            <h2>+1234 123 1234</h2>
+            <h2>+1234 123 1234</h2>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/email.png"/></div>
+          <div class="contact-info">
+            <h1>Email</h1>
+            <h2>info@gmail.com</h2>
+            <h2>abcd@gmail.com</h2>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="icon"><img src="https://img.icons8.com/clouds/100/000000/map-marker.png"/></div>
+          <div class="contact-info">
+            <h1>Address</h1>
+            <h2>Dhaka</h2>
+            <h2>Bangladesh</h2>
+          </div>
+        </div>
+      </div>
+  </div>
+</section>
+
+<!--End Contact Section-->
+
+<%- include('../partials/footer.ejs') %>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script type="module" src="/scripts/app.js"></script>
+</body>
+
+</html>

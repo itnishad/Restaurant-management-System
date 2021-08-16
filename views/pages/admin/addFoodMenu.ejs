@@ -1,0 +1,54 @@
+<%- include('../../partials/admin/head.ejs') %> 
+<div class="container">
+    <h2 class="page-title mt-2">Add a Food Menu</h2>
+    <a href="#" class="btn btn-primary mt-2 mb-3">Back to All Food Menu</a>
+
+    <form action="addFoodMenu" method="POST">
+        <div class="form-group">
+            <label for="">Title</label>
+            <input type="text" class="form-control" name="title" value="" placeholder="Title">
+        </div>
+
+        <div class="form-group">
+            <label for="">Slug</label>
+            <input type="text" class="form-control" name="slug" value="" placeholder="Slug">
+        </div>
+
+        <div class="form-group">
+            <label for="">Category</label>
+            <select name="category" class="form-control">
+                <% categorys.forEach(cat => { %>
+                    <option value="<%= cat.slug %> "><%= cat.title %> </option>
+                <%  }); %> 
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="">Price</label>
+            <input type="text" class="form-control" name="price" value="" placeholder="Price">
+        </div>
+
+        <div class="form-group">
+            <label for="">Image</label>
+            <select name="image" class="form-control">
+                    <option value="img1.jpg">img1.jpg</option>
+                    <option value="img2.jpg">img2.jpg</option>
+                    <option value="img3.jpg">img3.jpg</option>
+                    <option value="img4.jpg">img4.jpg</option>
+                    <option value="img5.jpg">img5.jpg</option>
+                    <option value="img6.jpg">img6.jpg</option>
+                    <option value="img7.jpg">img7.jpg</option>
+                    <option value="img8.jpg">img8.jpg</option>
+                    <option value="img9.jpg">img9.jpg</option>
+                    <option value="img10.jpg">img10.jpg</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="">Description Sort</label>
+            <textarea name="description" class="form-control" cols="30" rows="10" placeholder="Description"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary mb-5">Submit</button>
+    </form>
+</div>
+<%- include('../../partials/footer.ejs') %>

@@ -1,0 +1,31 @@
+<%- include('../../partials/admin/head.ejs') %> 
+
+<section id="hei" class="heig">
+    <div class="heightsec">
+        <div class="container">
+            <br><br>
+            <table class="table table-striped mb-5">
+                <thead>
+                    <tr>
+                        <th>User Name</th>
+                        <th>User Email</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% users.forEach(value => { %>
+                    <tr>
+                        <td> <%= value.username %> </td>
+                        <td> <%= value.email %></td>
+                        <td> <%= value.createdAt %> </td>
+                    </tr>
+                    <% }) %>
+                </tbody>
+            </table>
+            
+        </div>
+   
+    </div>
+</section>
+
+<%- include('../../partials/admin/footer.ejs') %> 

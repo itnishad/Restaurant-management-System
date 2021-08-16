@@ -1,0 +1,28 @@
+<%- include('../partials/head.ejs') %>
+
+
+<div class="category-bottom">
+  
+  <div class="category-item">
+    <% for(let i=0; i<2 ; i++) { %> 
+    <div class="cat">
+      <div class="card" style="width: 18rem;">
+        <img src="/images/img1.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><%= foods[i].title %> </h5>
+          <p class="card-text"><%= foods[i].description %> </p>
+          <h4>$ <%= foods[i].price %></h4>
+          <a href="#" class="btn btn-primary">Add To Cart</a>
+        </div>
+      </div>
+    </div>
+    <% } %> 
+  </div>
+
+</div>
+
+<%- include('../partials/footer.ejs') %>
+
+</body>
+
+</html>

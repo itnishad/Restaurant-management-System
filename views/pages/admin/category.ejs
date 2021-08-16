@@ -1,0 +1,28 @@
+<%- include('../../partials/admin/head.ejs') %> 
+
+<div class="container">
+
+    <h2 class="page-title mt-2">Categorys</h2>
+    <a href="#" class="btn btn-primary mt-2">Add a new Category</a>
+    <br><br>
+    <table class="table table-striped mb-5">
+        <thead>
+            <tr>
+                <th>Category</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% categorys.forEach(value => { %>
+            <tr>
+                <td> <%= value.title %> </td>
+                <td> <a href="editCategory/<%= value.slug %> ">Edit</a></td>
+                <td><a href="#">Delete</a></td>
+            </tr>
+            <% }) %>
+        </tbody>
+</div>
+</table>
+
+<%- include('../../partials/footer.ejs') %>

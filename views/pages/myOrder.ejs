@@ -1,0 +1,68 @@
+<%- include('../partials/head.ejs') %>
+
+<section id="hei" class="heig">
+    <div class="heightsec">
+        <div class="container">
+            <br><br>
+            <table class="table table-striped mb-5">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% cart.forEach(value => { %>
+                    <tr>
+                        <td> <%= value.title %> </td>
+                        <td> <%= value.price %></td>
+                        <td> 1</td>
+                    </tr>
+                    <% }) %>
+                </tbody>
+            </table>
+            <table class="table table-striped mb-5">
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>Total Quantity</td>
+                        <td><%= totalQty %></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>Total Price</td>
+                        <td><%= totalPrice %></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                
+            </table>
+        </div>
+        <div class="container add mb-5">
+            <span>Address</span>
+            <input type="text" id="address" name="address">
+            <a class="btn btn-primary" href="/add/clear">Confirm</a>
+        </div>    
+    </div>
+</section>
+<%- include('../partials/footer.ejs') %> 

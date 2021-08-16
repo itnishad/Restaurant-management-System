@@ -1,0 +1,41 @@
+<%- include('../partials/head.ejs') %>
+
+<section id="hei" class="heig">
+    <div class="heightsec">
+        <div class="container">
+            <br><br>
+            <table class="table table-striped mb-5">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% history.forEach(value => { %>
+                    <% if(value.userId.toString() === puserId.toString()){ %>
+                        <% foods.forEach(food =>{ %> 
+                            <% if(food._id.toString() === value.foodId.toString() ){ %> 
+                            <tr>
+                                <td> <%= food.title %> </td>
+                                <td> <%= food.price %></td>
+                                <td> <%= value.createdAt %></td>
+                            </tr>
+                            <% } %> 
+                        <% }) %> 
+                        
+                    <% } else{%>
+                        <tr>
+                            <td> Empty </td>
+                            <td> Empty</td>
+                            <td> Empty</td>
+                        </tr> 
+                    <% } %>
+                    <% }) %>
+                </tbody>
+            </table>
+        </div>   
+    </div>
+</section>
+<%- include('../partials/footer.ejs') %> 

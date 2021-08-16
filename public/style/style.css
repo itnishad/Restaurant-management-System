@@ -1,0 +1,265 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    background: rgba(245, 245, 245);
+    scroll-behavior: smooth;
+}
+a {
+    text-decoration: none;
+}
+
+#width {
+    height: 750px;
+}
+
+.acontainer {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.my-container {
+    min-height: 700px;
+}
+
+.cat {
+    display: inline-block;
+    margin: 10px 10px;
+}
+
+footer {
+    background: #343A40;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0px;
+}
+
+.heig {
+   
+}
+#section3 {
+    /*height: 750px;*/
+    display: inline-block;
+    width: 100%;
+}
+
+#section2 .category-item .cat .card img {
+        min-height: 220px !important;
+}
+
+/*section 1*/
+#section1 {
+    background-image: url(../images/img1.jpg);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    height: 100vh;
+    display: inline-block;
+    width: 100%;
+    z-index: 1;
+}
+
+#section1 .hero {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+    justify-content: flex-start;
+
+}
+
+#section1::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: .7;
+    z-index: -1;
+}
+
+#section1 h1 {
+    display: block;
+    width: fit-content;
+    font-size: 4rem;
+    position: relative;
+    color: white;
+}
+
+#section1 .cta {
+    display: inline-block;
+    padding: 10px 30px;
+    color: crimson;
+    background-color: transparent;
+    border: 2px solid crimson;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 30px;
+    transition: .3s ease;
+    transition-property: background-color, color;
+    text-decoration: none;
+}
+#section1 .cta:hover {
+    color: white;
+    background-color: crimson;
+}
+
+
+/*section1 end*/
+
+/**/
+#section2 {
+    /*height: 750px;*/
+    display: inline-block;
+    width: 100%;
+}
+
+#section2 .categorys {
+    flex-direction: column;
+    text-align: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+
+#section2 .category-title {
+    font-size: 4rem;
+    font-weight: 300;
+    color: black;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+}
+#section2 .category-title span {
+    color: crimson;
+}
+
+#section2 .category-top p {
+    font-size: 1.4rem;
+    margin-top: 5px;
+    line-height: 2.5rem;
+    font-weight: 300;
+    letter-spacing: 0.05rem;
+    padding: 0 20% 0 20%;
+}
+
+#section2 .category-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/**/
+
+/*Contact Section*/
+
+#section4 .contact {
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#section4 .contact-items {
+    width: 1200px;
+    display: flex;
+    flex-direction: row;
+}
+
+#section4 .contact-item {
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px 0px 18px 0 #0000002c;
+    transition: .3s ease box-shadow;
+}
+
+#section4 .contact-item:hover {
+    box-shadow: 0px 0px 5px 0 #0000002c;
+}
+
+#section4 .icon {
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+#section .contact-info h1 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+#section .contact-info h2 {
+    font-size: 1.3rem;
+    line-height: 2rem;
+    font-weight: 500;
+}
+/*End*/
+
+/*footer*/
+
+#footer {
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+}
+#footer .footer {
+    min-height: 200px;
+    flex-direction: column;
+    padding-top: 50px;
+    padding-bottom: 10px;
+}
+
+.brand h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: white;
+
+}
+
+.brand h1 span {
+    color: crimson;
+}
+#footer h2 {
+    color: white;
+    font-weight: 500;
+    font-size: 1.8rem;
+    letter-spacing: .1rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+footer .social-icon {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+footer .social-item{
+    flex-direction: row;
+    height: 50px;
+    width: 50px;
+    margin: 0 5px;
+}
+
+.add {
+    
+}
+
+
+/*end footer*/
